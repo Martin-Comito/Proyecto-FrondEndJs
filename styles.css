@@ -97,15 +97,13 @@ footer {
     transition: transform 0.3s;
 }
 
-/* ⬅️ SOLUCIÓN PARA IMÁGENES GRANDES ⬅️ */
+/* SOLUCIÓN para que las imágenes de productos se escalen */
 .producto-card img {
-    /* Asegura que la imagen no exceda el ancho de su tarjeta */
     width: 100%; 
     height: auto; 
     border-radius: 6px; 
     margin-bottom: 10px;
 }
-/* ------------------------------------- */
 
 .producto-card:hover {
     transform: translateY(-5px);
@@ -169,6 +167,27 @@ footer {
 }
 
 
+/* ⬅️ SOLUCIÓN PARA VIDEO RESPONSIVE ⬅️ */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* Relación de aspecto 16:9 */
+    padding-top: 25px;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto 30px auto; 
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* ------------------------------------- */
+
+
 /* ==================================== */
 /* 4. Media Queries (Diseño Responsivo) */
 /* ==================================== */
@@ -181,7 +200,6 @@ footer {
     
     .nav-list {
         margin-top: 15px;
-        /* La nav ya usa flex, solo ajustamos el espaciado si es necesario */
         gap: 15px; 
     }
 
