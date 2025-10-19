@@ -1,0 +1,182 @@
+/* ==================================== */
+/* 3. Estilos Generales y Tipografía    */
+/* ==================================== */
+body {
+    /* Requisito 3: Fuente de Google Fonts */
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Requisito 3: Propiedad background */
+    color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', serif;
+    color: #2c3e50;
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ==================================== */
+/* 3. Estilos Header y Footer           */
+/* ==================================== */
+header {
+    background-color: #2c3e50; /* Requisito 3: Estilos Header */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+/* 5. Lista de Navegación */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox para la nav */
+    gap: 25px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #3498db;
+}
+
+footer {
+    background-color: #34495e; /* Requisito 3: Estilos Footer */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin: 0 10px;
+}
+
+/* ==================================== */
+/* 4. Diseño con Flexbox (Productos)    */
+/* ==================================== */
+
+.productos-contenedor {
+    /* Requisito 4: Flexbox */
+    display: flex;
+    flex-wrap: wrap; /* Para que sea responsivo */
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.producto-card {
+    /* Ocupa 1/3 del contenedor */
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.3s;
+}
+
+.producto-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ==================================== */
+/* 4. Diseño con Grid (Reseñas)         */
+/* ==================================== */
+.reseñas-contenedor {
+    /* Requisito 4: CSS Grid */
+    display: grid;
+    /* Columnas auto-responsivas: mínimo 280px, máximo 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.reseña-card {
+    background-color: #ecf0f1;
+    border-left: 5px solid #3498db;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* ==================================== */
+/* 2. Formulario de Contacto            */
+/* ==================================== */
+.contacto form {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto form input, 
+.contacto form textarea,
+.contacto form button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.contacto form button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.contacto form button:hover {
+    background-color: #2980b9;
+}
+
+
+/* ==================================== */
+/* 4. Media Queries (Diseño Responsivo) */
+/* ==================================== */
+@media (max-width: 768px) {
+    /* Adaptación del Header */
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .nav-list {
+        margin-top: 15px;
+        /* La nav ya usa flex, solo ajustamos el espaciado si es necesario */
+        gap: 15px; 
+    }
+
+    /* Requisito 4: Formulario Responsivo */
+    .contacto form {
+        margin: 20px 10px; /* Más margen en móviles */
+    }
+}
