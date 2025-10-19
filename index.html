@@ -11,30 +11,29 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     
-    <link rel="stylesheet" href="styles.css"> 
+    <link rel="stylesheet" href="css/styles.css"> 
 </head>
 <body>
 
     <header class="main-header">
-        <img src="logo.png" alt="Logo de la Empresa" class="logo" width="100">
+        <img src="img/logo.png" alt="Logo de la Empresa" class="logo" width="100">
         <nav class="main-nav">
             <ul class="nav-list">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#reseñas">Reseñas</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <a href="#" class="cart-icon" aria-label="Ver carrito de compras">
+        <a href="carrito.html" class="cart-icon" aria-label="Ver carrito de compras">
             <i class="fas fa-shopping-cart"></i>
         </a>
     </header>
-    
+
     <main>
     
         <section id="inicio">
             <h1>Bienvenido a Tecno Comito</h1>
-            
             <div class="video-responsive">
                 <iframe width="560" height="315" 
                             src="https://www.youtube.com/embed/tte4FTLL5rE" 
@@ -51,7 +50,7 @@
             <div class="productos-contenedor">
                 
                 <article class="producto-card">
-                    <img src="auriculares.jpg" alt="Auriculares Raze Kaira X">
+                    <img src="img/auriculares.jpg" alt="Auriculares Raze Kaira X">
                     <h3 class="producto-nombre">Auriculares Raze Kaira X</h3>
                     <p class="producto-descripcion">Diseñados para gaming. Sonido claro y micrófono unidireccional.</p>
                     <p class="producto-precio">$ 45.000 ARS</p>
@@ -59,7 +58,7 @@
                 </article>
 
                 <article class="producto-card">
-                    <img src="mouse.jpg" alt="Mouse inalámbrico Gemini EM901X">
+                    <img src="img/mouse.jpg" alt="Mouse inalámbrico Gemini EM901X">
                     <h3 class="producto-nombre">Mouse Inalámbrico Gemini EM901X</h3>
                     <p class="producto-descripcion">Conectividad estable y diseño ergonómico para profesionales y gamers.</p>
                     <p class="producto-precio">$ 18.000 ARS</p>
@@ -67,7 +66,7 @@
                 </article>
 
                 <article class="producto-card">
-                    <img src="teclado.jpg" alt="Teclado Mecánico Eyooso Z11">
+                    <img src="img/teclado.jpg" alt="Teclado Mecánico Eyooso Z11">
                     <h3 class="producto-nombre">Teclado Mecánico Eyooso Z11</h3>
                     <p class="producto-descripcion">Tamaño compacto 60% y switches rápidos, ideal para ahorrar espacio.</p>
                     <p class="producto-precio">$ 32.000 ARS</p>
@@ -75,7 +74,7 @@
                 </article>
 
                 <article class="producto-card">
-                    <img src="mouse-mx.jpg" alt="Mouse Vertical Ergonómico">
+                    <img src="img/mouse-mx.jpg" alt="Mouse Vertical Ergonómico">
                     <h3 class="producto-nombre">Mouse Vertical Ergonómico</h3>
                     <p class="producto-descripcion">El mejor mouse vertical para prevenir la tensión de la muñeca. Alta precisión.</p>
                     <p class="producto-precio">$ 65.000 ARS</p>
@@ -83,7 +82,7 @@
                 </article>
 
                 <article class="producto-card">
-                    <img src="teclado-drevo.jpg" alt="Teclado DREVO Tizona G2">
+                    <img src="img/teclado-drevo.jpg" alt="Teclado DREVO Tizona G2">
                     <h3 class="producto-nombre">Teclado DREVO Tizona G2</h3>
                     <p class="producto-descripcion">Teclado mecánico modular, switches silenciosos y retroiluminación RGB completa.</p>
                     <p class="producto-precio">$ 88.000 ARS</p>
@@ -117,18 +116,7 @@
             </div>
         </section>
 
-        <section id="contacto" class="contacto">
-            <h2>Contáctanos</h2>
-            <form action="https://formspree.io/f/xgvnqypy" method="POST">
-                <input type="text" name="nombre" placeholder="Tu Nombre Completo" required>
-                <input type="email" name="email" placeholder="Tu Correo Electrónico" required>
-                <textarea name="mensaje" placeholder="Tu Mensaje" rows="5" required></textarea>
-                
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-        </section>
-
-    </main>
+        </main>
 
     <footer>
         <p>&copy; 2024 Proyecto Front-End. Todos los derechos reservados.</p>
