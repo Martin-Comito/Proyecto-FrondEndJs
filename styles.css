@@ -97,6 +97,16 @@ footer {
     transition: transform 0.3s;
 }
 
+/* ⬅️ SOLUCIÓN PARA IMÁGENES GRANDES ⬅️ */
+.producto-card img {
+    /* Asegura que la imagen no exceda el ancho de su tarjeta */
+    width: 100%; 
+    height: auto; 
+    border-radius: 6px; 
+    margin-bottom: 10px;
+}
+/* ------------------------------------- */
+
 .producto-card:hover {
     transform: translateY(-5px);
 }
